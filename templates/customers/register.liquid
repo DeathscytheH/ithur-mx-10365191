@@ -3,35 +3,78 @@
 <div id="customer-register">
   <div class="row">
     <div id="register" class="span12">
-      <h2 class="title">Create Account</h2>
+      <h2 class="title">Registrate para comprar tus boletos.</h2>
 
 	    {% form 'create_customer' %}
 	
 	      {{ form.errors | default_errors }}
 
 	      <div id="first_name" class="clearfix large_form">
-	        <label for="first_name" class="label">First Name</label>
+	        <label for="first_name" class="label">Nombre</label>
 	        <input type="text" value="" name="customer[first_name]" id="first_name" class="text" size="30" />
 	      </div>
 
 	      <div id="last_name" class="clearfix large_form">
-	        <label for="last_name" class="label">Last Name</label>
+	        <label for="last_name" class="label">Apellido</label>
 	        <input type="text" value="" name="customer[last_name]" id="last_name" class="text" size="30" />
 	      </div>
 
 	      <div id="email" class="clearfix large_form">
-	        <label for="email" class="label">Email Address</label>
+	        <label for="email" class="label">Email</label>
 	        <input type="email" value="" name="customer[email]" id="email" class="text" size="30" />
 	      </div>
-
+	      
 	      <div id="password" class="clearfix large_form">
 	        <label for="password" class="label">Password</label>
 	        <input type="password" value="" name="customer[password]" id="password" class="password text" size="30" />
+	      </div>	      
+
+	      <!-- #Registro extendido -->
+	      <div id="empresa" class="clearfix large_form">
+	        <label for="empresa" class="label">Empresa</label>
+	        <input type="text" value="" name="customer[note][empresa]" id="empresa" class="text" size="30" />
 	      </div>
 
+	      <div id="cargo" class="clearfix large_form">
+	        <label for="cargo" class="label">Cargo</label>
+	        <input type="text" value="" name="customer[note][cargo]" id="cargo" class="text" size="30" />
+	      </div>
+		
+		<div class="clearfix large_form">
+				<strong>Datos de la empresa</strong>
+				<br><br>
+		</div>
+
+	      <div id="Pais" class="clearfix large_form">
+	        <label for="Pais" class="label">Pais</label>
+	        <input type="text" value="" name="customer[note][Pais]" id="Pais" class="text" size="30" />
+	      </div>
+
+	      <div id="Estado" class="clearfix large_form">
+	        <label for="Estado" class="label">Estado</label>
+	        <input type="text" value="" name="customer[note][Estado]" id="Estado" class="text" size="30" />
+	      </div>
+
+	      <div id="Ciudad" class="clearfix large_form">
+	        <label for="Ciudad" class="label">Ciudad</label>
+	        <input type="text" value="" name="customer[note][Ciudad]" id="Ciudad" class="text" size="30" />
+	      </div>
+
+	      <div id="Calle" class="clearfix large_form">
+	        <label for="Calle" class="label">Calle</label>
+	        <input type="text" value="" name="customer[note][Calle]" id="Calle" class="text" size="30" />
+	      </div>
+
+	      <div id="Colonia" class="clearfix large_form">
+	        <label for="Colonia" class="label">Colonia</label>
+	        <input type="text" value="" name="customer[note][Colonia]" id="Colonia" class="text" size="30" />
+	      </div>
+
+		<!-- # Fin registro extendido -->
+
 	      <div class="action_bottom">
-	        <input class="btn" type="submit" value="Create" />
-	        <span class="note">or <a href="{{ shop.url }}">Return to Store</a></span>
+	        <input class="btn" type="submit" value="Crear Cuenta" />
+	        <span class="note">or <a href="{{ shop.url }}">Regresa a la tienda.</a></span>
 	      </div>
 	
 	    {% endform %}

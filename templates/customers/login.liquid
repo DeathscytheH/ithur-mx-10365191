@@ -7,13 +7,13 @@
       {% form 'customer_login' %}
       {{ form.errors | default_errors }}
 
-      <label for="customer_email" class="label">Email Address</label>
+      <label for="customer_email" class="label">Email</label>
       <input type="email" value="" name="customer[email]" id="customer_email" class="text" />
 
       {% if form.password_needed %}
       <label for="customer_password" class="label">Password</label>
       <input type="password" value="" name="customer[password]" id="customer_password" class="text" size="16" />
-      <a href="#" onclick="showRecoverPasswordForm();return false;">Forgot your password?</a>
+      <a href="#" onclick="showRecoverPasswordForm();return false;">¿Olvidaste tu password?</a>
       {% endif %}
 
       <div class="action_bottom">
@@ -23,23 +23,23 @@
     </div>
     
     <div id="recover-password" style="display:none;" class="span7">
-      <h2>Reset Password</h2>
-      <p class="note">We will send you an email to reset your password.</p>
+      <h2>Recupera tu Password</h2>
+      <p class="note">Te enviaremos un mail para que recuperes tu password.</p>
 
       {% form 'recover_customer_password' %}
       {{ form.errors | default_errors }}
 
-      <label for="email" class="label">Email Address</label>
+      <label for="email" class="label">Email</label>
       <input type="email" value="" size="30" name="email" id="recover-email" class="text" />
 
       <input class="btn" type="submit" value="Submit" />
-      <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancel</a></span>
+      <span class="note">or <a href="#" onclick="hideRecoverPasswordForm();return false;">Cancelar</a></span>
       {% endform %}
     </div>
     
     {% if shop.checkout.guest_login %}
     <div id="guest" class="span5">
-      <h2>Guest Login</h2>
+      <h2>Login de invitados</h2>
       {% form 'guest_login' %}
       <input class="btn" type="submit" value="Continue as Guest" />
       {% endform %}

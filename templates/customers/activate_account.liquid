@@ -1,8 +1,8 @@
 {% layout settings.customer_layout %}
 <div id="customer-activate" class="row">
   <div class="span12">
-    <h1>Activate Account</h1>
-    <p class="note create-password">Create your password to activate your account</p>
+    <h1>Activar Cuenta</h1>
+    <p class="note create-password">Crea un password para crear una cuenta.</p>
 
     {% form 'activate_customer_password' %}
     {{ form.errors | default_errors }}
@@ -10,13 +10,13 @@
     <label class="label" for="password">Password</label>
     <input type="password" value="" name="customer[password]" id="customer_password" class="text" size="16" />
 
-    <label class="label" for="password_confirmation">Password Confirmation</label>
+    <label class="label" for="password_confirmation">Confirma tu Password</label>
     <input type="password" value="" name="customer[password_confirmation]" id="customer_password_confirmation" class="text" size="16" />
 
     <div class="action_bottom">
       <input class="btn" type="submit" value="Activate Account" />
       <span class="note">or</span>
-      <a href="/">Decline Invitation</a>
+      <a href="/">Declinar la invitacion.</a>
     </div>
     {% endform %}
   </div> 

@@ -2,11 +2,11 @@
 <div id="customer-order">
   <div class="row">
     <div class="span12">
-      <h1>Order {{ order.name }} <span class="note order_date">&mdash; {{ order.created_at | date: "%b %d, %Y %I:%M%p" }}</span></h1>
+      <h1>Orden {{ order.name }} <span class="note order_date">&mdash; {{ order.created_at | date: "%b %d, %Y %I:%M%p" }}</span></h1>
       
       {% if order.cancelled %}
       <div id="order_cancelled" class="flash notice">
-        <h5 id="order_cancelled_title">Order Cancelled <span class="note">{{ order.cancelled_at | date: "%B %d, %Y %I:%M%p" }}</span></h5>
+        <h5 id="order_cancelled_title">Orden Cancelada <span class="note">{{ order.cancelled_at | date: "%B %d, %Y %I:%M%p" }}</span></h5>
         <span class="note">{{ order.cancel_reason }}</span>
       </div>
       {% endif %}
@@ -15,8 +15,8 @@
   
   <div class="row">
     <div id="order_payment" class="span6">
-      <h2 class="order_section_title">Billing Address</h2>
-      <p><span class="note">Payment Status:</span> <span class="status_{{ order.financial_status }}">{{ order.financial_status }}</span></p>
+      <h2 class="order_section_title">Direccion de Facturación</h2>
+      <p><span class="note">Status del pago:</span> <span class="status_{{ order.financial_status }}">{{ order.financial_status }}</span></p>
       <div class="address note">
         <p>{{ order.billing_address.name }}</p>
         <p>{{ order.billing_address.company }}</p>
@@ -28,8 +28,8 @@
     </div>
     {% if order.shipping_address %}
     <div id="order_shipping" class="span6">
-      <h2 class="order_section_title">Shipping Address</h2>
-      <p><span class="note">Fulfillment Status:</span> <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status }}</span></p>
+      <h2 class="order_section_title">Direccion de envio</h2>
+      <p><span class="note">Status:</span> <span class="status_{{ order.fulfillment_status }}">{{ order.fulfillment_status }}</span></p>
       <div class="address note">
         <p>{{ order.shipping_address.name }}</p>
         <p>{{ order.shipping_address.company }}</p>
@@ -50,8 +50,8 @@
           <tr>
             <th>Item</th>
             <th>SKU</th>
-            <th>Price</th>
-            <th class="center">Quantity</th>
+            <th>Precio</th>
+            <th class="center">Cantidad</th>
             <th class="total">Total</th>
           </tr>
         </thead>
