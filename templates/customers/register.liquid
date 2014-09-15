@@ -27,54 +27,115 @@
 	      <div id="password" class="clearfix large_form">
 	        <label for="password" class="label">Password</label>
 	        <input type="password" value="" name="customer[password]" id="password" class="password text" size="30" />
-	      </div>	      
-
-	      <!-- #Registro extendido -->
-	      <div id="empresa" class="clearfix large_form">
-	        <label for="empresa" class="label">Empresa</label>
-	        <input type="text" value="" name="customer[note][empresa]" id="empresa" class="text" size="30" />
 	      </div>
+	      <!-- #Inicia script -->
+	      <script>
+	      	$(document).ready(function(){
+			    $('.menu>li').on('click',function(e){
+			        $('.container>.'+ e.target.classList[0]).show().siblings().hide();
+			    });
+			});
+	      </script>
+	      <!-- #Finaliza script -->
 
-	      <div id="cargo" class="clearfix large_form">
-	        <label for="cargo" class="label">Cargo</label>
-	        <input type="text" value="" name="customer[note][cargo]" id="cargo" class="text" size="30" />
-	      </div>
-		
-		<div class="clearfix large_form">
-				<strong>Datos de la empresa</strong>
+	      <!-- #Inicia menu especial -->
+	    <div class="clearfix large_form">
+				<strong>Selecciona tu giro</strong>
 				<br><br>
 		</div>
+		<ul class="menu">
+		    <li class="toggle1">Empresa</li>
+		    <li class="toggle2">Escuela</li>
+		    <li class="toggle3">Particular</li>
+		</ul>      
+		<!-- #Inicia registro extendido -->
 
-	      <div id="Pais" class="clearfix large_form">
-	        <label for="Pais" class="label">Pais</label>
-	        <input type="text" value="" name="customer[note][Pais]" id="Pais" class="text" size="30" />
-	      </div>
+		
+		<div class="container">
+			<!-- #Registro extendido Empresa-->
+			<div class="clearfix toggle1">
+				<div class="clearfix large_form">
+						<strong>Datos de la empresa</strong>
+						<br><br>
+				</div>		      
+		      <div id="empresa" class="clearfix large_form">
+		        <label for="empresa" class="label">Empresa</label>
+		        <input type="text" value="" name="customer[note][empresa]" id="empresa" class="text" size="30" />
+		      </div>
 
-	      <div id="Estado" class="clearfix large_form">
-	        <label for="Estado" class="label">Estado</label>
-	        <input type="text" value="" name="customer[note][Estado]" id="Estado" class="text" size="30" />
-	      </div>
+		      <div id="giro" class="clearfix large_form">
+		        <label for="giro" class="label">Giro de la empresa</label>
+		        <input type="text" value="" name="customer[note][giro]" id="giro" class="text" size="30" />
+		      </div>
 
-	      <div id="Ciudad" class="clearfix large_form">
-	        <label for="Ciudad" class="label">Ciudad</label>
-	        <input type="text" value="" name="customer[note][Ciudad]" id="Ciudad" class="text" size="30" />
-	      </div>
+		      <div id="cargo" class="clearfix large_form">
+		        <label for="cargo" class="label">Cargo</label>
+		        <input type="text" value="" name="customer[note][cargo]" id="cargo" class="text" size="30" />
+		      </div>
 
-	      <div id="Calle" class="clearfix large_form">
-	        <label for="Calle" class="label">Calle</label>
-	        <input type="text" value="" name="customer[note][Calle]" id="Calle" class="text" size="30" />
-	      </div>
+		      <div id="Pais" class="clearfix large_form">
+		        <label for="Pais" class="label">Pais</label>
+		        <input type="text" value="" name="customer[note][Pais]" id="Pais" class="text" size="30" />
+		      </div>
 
-	      <div id="Colonia" class="clearfix large_form">
-	        <label for="Colonia" class="label">Colonia</label>
-	        <input type="text" value="" name="customer[note][Colonia]" id="Colonia" class="text" size="30" />
-	      </div>
+		      <div id="Estado" class="clearfix large_form">
+		        <label for="Estado" class="label">Estado</label>
+		        <input type="text" value="" name="customer[note][Estado]" id="Estado" class="text" size="30" />
+		      </div>
 
-		<!-- # Fin registro extendido -->
+		      <div id="Ciudad" class="clearfix large_form">
+		        <label for="Ciudad" class="label">Ciudad</label>
+		        <input type="text" value="" name="customer[note][Ciudad]" id="Ciudad" class="text" size="30" />
+		      </div>		
+			</div>
+			<!-- #Fin Registro extendido Empresa-->
+
+			<!-- #Registro extendido Escuela-->
+			<div class="toggle2">
+				<div class="clearfix large_form">
+						<strong>Datos de la Escuela</strong>
+						<br><br>
+				</div>		      
+		      <div id="escuela" class="clearfix large_form">
+		        <label for="escuela" class="label">Escuela</label>
+		        <input type="text" value="" name="customer[note][escuela]" id="escuela" class="text" size="30" />
+		      </div>
+
+		      <div id="carrera" class="clearfix large_form">
+		        <label for="carrera" class="label">Carrera a la que pertenece.</label>
+		        <input type="text" value="" name="customer[note][carrera]" id="carrera" class="text" size="30" />
+		      </div>
+
+		      <div id="estudiante" class="clearfix large_form">
+		        <label for="estudiante" class="label">Estudiante o Docente?</label>
+		        <input type="text" value="" name="customer[note][estudiante]" id="estudiante" class="text" size="30" />
+		      </div>
+
+		      <div id="Pais" class="clearfix large_form">
+		        <label for="Pais" class="label">Pais</label>
+		        <input type="text" value="" name="customer[note][Pais]" id="Pais" class="text" size="30" />
+		      </div>
+
+		      <div id="Estado" class="clearfix large_form">
+		        <label for="Estado" class="label">Estado</label>
+		        <input type="text" value="" name="customer[note][Estado]" id="Estado" class="text" size="30" />
+		      </div>
+
+		      <div id="Ciudad" class="clearfix large_form">
+		        <label for="Ciudad" class="label">Ciudad</label>
+		        <input type="text" value="" name="customer[note][Ciudad]" id="Ciudad" class="text" size="30" />
+		      </div>				
+			</div>
+			<!-- #Fin Registro extendido Escuela-->
+			<div class="toggle3">
+				Datos Particular
+			</div>
+		</div>
+		<!-- # Fin registro extendido Empresa-->	
 
 	      <div class="action_bottom">
 	        <input class="btn" type="submit" value="Crear Cuenta" />
-	        <span class="note">or <a href="{{ shop.url }}">Regresa a la tienda.</a></span>
+	        <span class="note">o <a href="{{ shop.url }}">Regresa a la tienda.</a></span>
 	      </div>
 	
 	    {% endform %}
